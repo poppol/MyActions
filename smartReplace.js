@@ -28,6 +28,12 @@ async function inject_jd() {
             value: `outPutUrl = err ? './tmp/' : outPutUrl;`,
         });
     }
+    if (remoteContent.indexOf("process.exit(0)")>=0){
+        replacements.push({
+            key: "process.exit(0)",
+            value: `{}`,
+        });
+    }
     ignore_jd();
     await downloader_jd();
     await downloader_notify();
