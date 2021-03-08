@@ -49,3 +49,4 @@ jobs:
                   SYNCURL: jd_jxd.js
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  JD_JXD_EXCHANGE: ${{ github.event.client_payload.JD_JXD_EXCHANGE || secrets.JD_JXD_EXCHANGE }}
