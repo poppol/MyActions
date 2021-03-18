@@ -48,3 +48,11 @@ jobs:
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
                   CFD_NOTIFY_CONTROL: ${{ github.event.client_payload.CFD_NOTIFY_CONTROL || secrets.CFD_NOTIFY_CONTROL }}
+                  A: ${{ github.event.client_payload.A || secrets.A }}
+                  B: ${{ github.event.client_payload.B || secrets.B }}
+                  C: ${{ github.event.client_payload.C || secrets.C }}
+                  D: ${{ github.event.client_payload.D || secrets.D }}
+                  E: ${{ github.event.client_payload.E || secrets.E }}
+                  F: ${{ github.event.client_payload.F || secrets.F }}
+                  G: ${{ github.event.client_payload.G || secrets.G }}
+
