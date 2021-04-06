@@ -1,4 +1,4 @@
-name: 下班全勤奖
+name: 店铺大转盘
 
 on:
     workflow_dispatch:
