@@ -54,6 +54,7 @@ jobs:
                   Y: ${{ github.event.client_payload.Y || secrets.Y }}
                   Z: ${{ github.event.client_payload.Z || secrets.Z }}
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
+                  JD_COOKIE_URL: ${{ github.event.client_payload.JD_COOKIE_URL || secrets.JD_COOKIE_URL }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
                   JD_USER_AGENT: ${{ github.event.client_payload.JD_USER_AGENT || secrets.JD_USER_AGENT }}
                   PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
