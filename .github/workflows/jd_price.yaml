@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 工业品爱消除
+name: 京东价格保护
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "30 * * * *"
+        - cron: "5 16 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_gyec
+        types: jd_price
 
 jobs:
     build:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【工业品爱消除】"
+            - name: "运行 【京东价格保护】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -73,6 +73,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: jd_gyec.js
-                  REPOURL: https://github.com/Choicc/Loon/raw/main/
+                  SYNCURL: jd_price.js
+                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
