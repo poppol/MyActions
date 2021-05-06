@@ -1,13 +1,13 @@
-name: 下班全勤奖
+name: 超级无线组队分奖品
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 3 * * *"
+        - cron: "0 1 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: monk_skyworth_car
+        types: z_shop_captain
 
 jobs:
     build:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行【下班全勤奖】"
+            - name: "运行【小魔方】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -71,7 +71,7 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: dust/car/monk_skyworth_car.js
+                  SYNCURL: dust/i-chenzhe/z_shop_captain.js
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
 
