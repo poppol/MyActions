@@ -3,7 +3,7 @@ name: 京享值PK
 on:
     workflow_dispatch:
     schedule:
-        - cron: "2 0,5,10 17-31 5 *"
+        - cron: "2 0,5,10,20 17-31 5 *"
     watch:
         types: [started]
     repository_dispatch:
